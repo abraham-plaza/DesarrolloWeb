@@ -1,0 +1,57 @@
+/* Estilos Generales */
+body, html {
+    background-color: #faf3f3;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilización del Contenedor Principal */
+.contenedor {
+    background-color: #787892;
+    display: flex;
+    flex-direction: column;  /*row (fila), colum(columna),column-reverse(columna inversa)*/
+    min-height: 100vh;
+}
+
+.cuerpo {
+    display: flex;
+    flex: 1;         /*justify-content : controlar la alineacion de los items, flex-start-flex-end,center,space-between y space around*/  
+}
+
+header, footer {
+    background-color: #faf3f3;
+    color: #462d2d;
+    text-align: center;
+    padding: 20px 0;   
+}
+
+aside {
+    background-color: #787892;
+    padding: 20px;
+    width: 250px; /* Ancho fijo para la barra lateral */
+    color: #f0eded;
+}
+
+img{
+    display: block;
+    width: 60%;
+    margin: auto;
+  }
+
+
+main {
+    flex: 1; /* Ocupa el espacio restante */
+    padding: 20px;
+    background-color: #fffcfc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cuerpo {
+        flex-direction: column;
+    }
+    aside {
+        width: auto; /* Ajusta el ancho de la barra lateral para dispositivos móviles */
+    }
+}

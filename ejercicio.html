@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog con Flexbox</title>
+    <link rel="stylesheet" href="Abraham estilos.css"> <!-- Vinculación de CSS -->
+    <link rel="stylesheet" href="ejercicio.js"> <!-- Vinculación de JS -->
+</head>
+<body>
+    <div class="contenedor">
+        <header> Inversionistas PLUS </header>
+        <div class="cuerpo">
+            <div>
+                <aside> Conoce sobre las inversiones que tenemso para ti
+                        <ul>
+                            <li><a href="https://www.hsbc.com.mx/inversiones/inversion-a-plazo/pagare/"> Pagare</a></li>
+                            <li><a href="https://www.hsbc.com.mx/inversiones/inversion-a-plazo/inversion-express/"> Inverion Express </a></li>
+                            <li><a href="https://www.hsbc.com.mx/inversiones/inversion-a-plazo/cedes/"> Cede</a></li>
+                        </ul>
+                        <img src="reconocimiento.jpeg">
+                        <p> Un reconocimiento que otorga la revista Global Banking & Finance Review, 
+                            una de las publicaciones británicas más importantes en el mundo de las finanzas. </p>
+
+                        <img src="IPAB.jpg">
+                        <p> Las Inversiones a Plazo se encuentran protegidas por el IPAB hasta por un monto equivalente a 400 mil UDIs por cliente por institución, 
+                            lo anterior, de conformidad con las disposiciones legales que regulan a dicho Instituto. www.ipab.org.mx </p>
+                </aside>
+            </div>
+            <main>
+                <H1> Inversiones a Plazo </H1>       
+                <H2> Pagares             </H2>
+                    <div id= "Pagare"> 
+                        <img src="pagare.jpeg">
+                        <p> Es un medio de inversión a plazo fijo y de fácil de operación.
+                            Te permite saber los rendimientos que obtendrás desde la contratación, 
+                            y también puedes elegir cuando recibirlos ya sea al momento de contratar, 
+                            mensualmente o al vencimiento del plazo  </p>
+                    </div>
+
+                <H2> Inversion Express  </H2>
+                    <div class= "Express"> 
+                        <img src="express.jpeg">
+                        <p>Recibe tus rendimientos desde la contratación.    </p>
+                    </div>
+
+                <H2> CEDE Tasa Fija     </H2>
+                    <div class = "Pagare cede"> 
+                        <img src="cedes.jpeg">
+                        <p>Recibe tus rendimientos de forma mensual.</p>
+                    </div>
+
+            </main>
+
+        </div>
+
+        <style type="text/css">
+            .oculto { display: none; }
+            .visible { display: inline; }
+        </style>
+            
+        <script>
+            function muestra() {
+              var elemento = document.getElementById("adicional");
+              elemento.className = "visible";
+            
+              var enlace = document.getElementById("enlace");
+              enlace.className = "oculto";
+            }
+            </script>
+            </head>
+            
+            <body>
+            
+            <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. <span id="adicional" class="oculto">Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id metus.</span></p>
+            <a id="enlace" href="#" onclick="muestra(); return false;">Seguir leyendo</a>
+
+
+        <footer>Consulta términos, requisitos de contratación 
+                y comisiones de Banca por Internet y app HSBC México en 
+                <a href="https://www.hsbc.com.mx/inversiones/inversion-a-plazo/">Nuestro Sitio Web</a>
+        </footer>
+        </div>
+
+        <script> 
+        
+        var Pagare = document.getElementById('Pagare');
+        console.log(Pagare.textContent);
+
+        var inversion = document.getElementsByClassName('inversion');
+        console.log(inversion[1].textContent);
+
+        var cede = document.querySelector('.cede');
+        console.log(cede.textContent); // Item 2
+
+    </script>
+
+
+
+
+</body>
+</html>
